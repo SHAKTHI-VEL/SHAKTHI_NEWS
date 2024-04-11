@@ -32,7 +32,7 @@ class _SignupState extends State<Signup> {
                 height: height * 0.04,
               ),
               Text(
-                'Signup to join',
+                'Signup',
                 style: GoogleFonts.poppins(
                     fontSize: height * 0.04, fontWeight: FontWeight.bold),
               ),
@@ -46,6 +46,22 @@ class _SignupState extends State<Signup> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    Text('Name',
+                        style: GoogleFonts.poppins(
+                            fontSize: height * 0.025,
+                            fontWeight: FontWeight.w400)),
+                    TextField(
+                      controller: namecontroller,
+                      decoration: InputDecoration(
+                        fillColor: Colors.grey.shade100,
+                        filled: true,
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(8)),
+                      ),
+                    ),
+                    SizedBox(
+                      height: height * 0.02,
+                    ),
                     Text('Email',
                         style: GoogleFonts.poppins(
                             fontSize: height * 0.025,
@@ -79,20 +95,7 @@ class _SignupState extends State<Signup> {
                     SizedBox(
                       height: height * 0.035,
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        InkWell(
-                          child: Text(
-                            'Forgot Password?',
-                            style: GoogleFonts.poppins(
-                                fontSize: height * 0.017,
-                                color: Colors.orange.shade300),
-                          ),
-                          onTap: () {},
-                        )
-                      ],
-                    ),
+                   
                     SizedBox(
                       height: height * 0.035,
                     ),
@@ -107,7 +110,7 @@ class _SignupState extends State<Signup> {
                                 backgroundColor: Colors.orange),
                             onPressed: () {},
                             child: Text(
-                              'Login',
+                              'Sign up',
                               style: GoogleFonts.poppins(
                                   fontSize: height * 0.025,
                                   color: Colors.white),
@@ -122,7 +125,7 @@ class _SignupState extends State<Signup> {
                     Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                       Text.rich(
                         TextSpan(
-                          text: 'Don\'t have an account?',
+                          text: 'Already have an account?',
                           style: GoogleFonts.poppins(
                               fontSize: height * 0.017,
                               fontWeight: FontWeight.w300),
@@ -131,7 +134,7 @@ class _SignupState extends State<Signup> {
                               child: InkWell(
                                 onTap: (){},
                                 child: Text(
-                                  'Sign up',
+                                  'Login',
                                   style: GoogleFonts.poppins(
                                       fontSize: height * 0.017,
                                       fontWeight: FontWeight.bold,
