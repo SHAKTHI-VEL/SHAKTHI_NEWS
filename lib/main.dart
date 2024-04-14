@@ -3,6 +3,7 @@ import 'package:shakthi_news/features/ForgotPassword/ui/forgotPassword.dart';
 import 'package:shakthi_news/features/ForgotPassword/ui/newpassword.dart';
 import 'package:shakthi_news/features/ForgotPassword/ui/otp.dart';
 import 'package:shakthi_news/features/Login/ui/login.dart';
+import 'package:shakthi_news/features/MainScreen/ui/mainscreen.dart';
 import 'package:shakthi_news/features/Signup/ui/signup.dart';
 
 void main() {
@@ -19,13 +20,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
       ),
-      initialRoute: 'newpassword',
+      initialRoute: 'mainscreen',
       routes: {
         'login':(context)=>const Login(),
         'signup':(context)=>const Signup(),
         'forgotpassword':(context)=>const ForgotPassword(),
         'otp':(context)=>const OTP(),
-        'newpassword':(context)=>const NewPassword()
+        'newpassword':(context)=>const NewPassword(),
+        'mainscreen':(context)=>const MainScreen()
       },
     );
   }
