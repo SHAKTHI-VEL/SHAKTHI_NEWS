@@ -51,6 +51,7 @@ class _NewsCardState extends State<NewsCard> {
                     Text(
                       'English',
                       style: GoogleFonts.poppins(
+                        color:Colors.green.shade500,
                           fontSize: height * 0.016,
                           fontWeight: FontWeight.w600),
                     ),
