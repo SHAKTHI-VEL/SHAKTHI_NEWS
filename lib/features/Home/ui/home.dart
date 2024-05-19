@@ -61,7 +61,8 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                     child: Container(
-                        margin: EdgeInsets.only(top: height * 0.017),
+                      alignment: Alignment.center,
+                        margin: EdgeInsets.only(top: height * 0.005),
                         child: Text(
                           'Every paper sold is a bridge between information and the curious mind.',
                           style: GoogleFonts.podkova(
@@ -69,7 +70,7 @@ class _HomeState extends State<Home> {
                               fontWeight: FontWeight.w300),
                         )),
                   ),
-                  SizedBox(width: width*0.018,),
+                  SizedBox(width: width*0.010,),
                   Image(
                     image: AssetImage('assets/news.png'),
                     height: height * 0.107,
@@ -99,7 +100,7 @@ class _HomeState extends State<Home> {
             ),
             Expanded(
                 child: Container(
-                    margin: EdgeInsets.only(left: width*0.04),
+                    margin: EdgeInsets.only(left: width*0.08),
                     width: width,
                     height: height * 0.783,
                     child: GridView.builder(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2), itemBuilder: (context,index){

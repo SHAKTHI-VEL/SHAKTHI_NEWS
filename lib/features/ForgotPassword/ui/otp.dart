@@ -42,7 +42,7 @@ class _OTPState extends State<OTP> {
               SizedBox(
                 height: height * 0.05,
               ),
-              Text('Verify your email.Enter 6 digit code sent to your email',
+              Text('Enter 6 digit code sent to your email',
                   style: GoogleFonts.poppins(fontSize: height * 0.015)),
               SizedBox(
                 height: height * 0.050,

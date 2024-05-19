@@ -20,7 +20,9 @@ class _PaperShowcaseState extends State<PaperShowcase> {
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios_new),
           color: Colors.white,
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
         centerTitle: true,
         title: Text('Description'),

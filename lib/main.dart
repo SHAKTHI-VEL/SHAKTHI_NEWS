@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
       ),
-      initialRoute: 'papershowcase',
+      initialRoute: 'mainscreen',
       routes: {
         'login':(context)=>const Login(),
         'signup':(context)=>const Signup(),
