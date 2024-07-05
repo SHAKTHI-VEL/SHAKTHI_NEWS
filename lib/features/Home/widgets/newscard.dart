@@ -22,12 +22,20 @@ class _NewsCardState extends State<NewsCard> {
               borderRadius: BorderRadius.all(
                 Radius.circular(width * 0.018),
               ),
+              // image: DecorationImage(image: AssetImage('assets/test.jpg'),fit: BoxFit.fill),
               color: Colors.grey.shade100),
           width: width * 0.39,
           height: height * 0.17,
           child: Column(
             children: [
-              Image(image: AssetImage('assets/toi.jpeg')),
+              Container(
+                height: 90,
+                decoration: BoxDecoration(
+                  image: DecorationImage(image: AssetImage('assets/toi.jpeg'),fit:BoxFit.fill),
+                  
+                ),
+              ),
+              // Image(image: AssetImage('assets/test.jpg')),
               SizedBox(
                 height: height * 0.0032,
               ),

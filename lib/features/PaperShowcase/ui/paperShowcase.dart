@@ -1,6 +1,7 @@
 // import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shakthi_news/features/MainScreen/ui/mainscreen.dart';
 
 class PaperShowcase extends StatefulWidget {
   const PaperShowcase({super.key});
@@ -35,15 +36,14 @@ class _PaperShowcaseState extends State<PaperShowcase> {
             height: height * 0.04,
           ),
           Container(
+            height:  height * 0.25,
             alignment: Alignment.center,
-            child: Image(
-              image: AssetImage('assets/toi.jpeg'),
-              fit: BoxFit.fill,
-              height: height * 0.19,
+            decoration: BoxDecoration(
+              image: DecorationImage(image: AssetImage('assets/toi.jpeg'),fit:BoxFit.fill)
             ),
           ),
           SizedBox(
-            height: height * 0.09,
+            height: height * 0.04,
           ),
           Container(
             margin: EdgeInsets.symmetric(horizontal: width * 0.06),
@@ -76,7 +76,9 @@ class _PaperShowcaseState extends State<PaperShowcase> {
                       children: [
                         Text('₹ 6.0',style: TextStyle(fontSize:height*0.02,fontWeight: FontWeight.bold),),
                         InkWell(
-                          onTap: (){},
+                          onTap: (){
+                            Navigator.of(context).push(MaterialPageRoute(builder: (context)=>MainScreen()));
+                          },
                           child: Container(
                             decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),color: Colors.white),
                             alignment: Alignment.center,

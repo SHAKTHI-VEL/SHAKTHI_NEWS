@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:shakthi_news/features/ForgotPassword/ui/forgotPassword.dart';
 import 'package:shakthi_news/features/ForgotPassword/ui/newpassword.dart';
 import 'package:shakthi_news/features/ForgotPassword/ui/otp.dart';
@@ -7,7 +8,8 @@ import 'package:shakthi_news/features/MainScreen/ui/mainscreen.dart';
 import 'package:shakthi_news/features/PaperShowcase/ui/paperShowcase.dart';
 import 'package:shakthi_news/features/Signup/ui/signup.dart';
 
-void main() {
+void main() async{
+  await dotenv.load(fileName: ".env");
   runApp(const MyApp());
 }
 
@@ -21,7 +23,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
       ),
-      initialRoute: 'mainscreen',
+      initialRoute: 'login',
       routes: {
         'login':(context)=>const Login(),
         'signup':(context)=>const Signup(),

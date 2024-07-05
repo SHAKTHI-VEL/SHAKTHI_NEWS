@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Cart_Card extends StatefulWidget {
@@ -25,27 +26,31 @@ class _Cart_CardState extends State<Cart_Card> {
             color: Colors.orange.shade200
           ),
           width: width*0.93,
-          height: height*0.16,
+          height: height*0.13,
           child: Container(
             margin: EdgeInsets.all(width*0.02),
             child: Column(
               children: [
-                SizedBox(height: height*0.010,),
+                SizedBox(height: height*0.006,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    Image(
-                        image: AssetImage('assets/toi.jpeg'),
-                        height: height * 0.107,
-                      ),
+                    ClipRRect(
+                          borderRadius: BorderRadius.circular(8.0),
+                      child: Image(
+                          image: AssetImage('assets/toi.jpeg'),
+                          height: height * 0.102,
+                          fit: BoxFit.cover,
+                        ),
+                    ),
                     Column(
                       children: [
-                        Text('Times of India', style: GoogleFonts.poppins(
+                        Text('Times of India', style: GoogleFonts.alice(
                                   fontSize: height * 0.020, fontWeight: FontWeight.w400),
                             ),
                           SizedBox(height: height*0.01,),
-                          Text('₹ 6.0', style: GoogleFonts.poppins(
-                                  fontSize: height * 0.016, fontWeight: FontWeight.w400),
+                          Text('₹ 6.0', style: GoogleFonts.alice(
+                                  fontSize: height * 0.020, fontWeight: FontWeight.w400),
                             ),
                       ],
                     ),
