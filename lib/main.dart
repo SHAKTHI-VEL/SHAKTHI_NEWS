@@ -7,23 +7,19 @@ import 'package:shakthi_news/features/Login/ui/login.dart';
 import 'package:shakthi_news/features/MainScreen/ui/mainscreen.dart';
 import 'package:shakthi_news/features/PaperShowcase/ui/paperShowcase.dart';
 import 'package:shakthi_news/features/Signup/ui/signup.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() async{
   await dotenv.load(fileName: ".env");
-  runApp(const MyApp());
-}
+  final SharedPreferences prefs = await SharedPreferences.getInstance();
+  final token=prefs.getString('token');
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
+  runApp( MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: true,
       ),
-      initialRoute: 'forgotpassword',
+      initialRoute: token==null?'login':'mainscreen',
       routes: {
         'login':(context)=>const Login(),
         'signup':(context)=>const Signup(),
@@ -33,6 +29,7 @@ class MyApp extends StatelessWidget {
         'mainscreen':(context)=>const MainScreen(),
         'papershowcase':(context)=>const PaperShowcase()
       },
-    );
-  }
+    ));
 }
+
+

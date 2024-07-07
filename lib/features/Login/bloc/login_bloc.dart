@@ -8,6 +8,7 @@ import 'package:meta/meta.dart';
 import 'package:http/http.dart' as http;
 import 'package:shakthi_news/features/Login/models/responseModel.dart';
 import 'package:shakthi_news/features/Login/repos/login_repo.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 
 part 'login_event.dart';
@@ -23,6 +24,8 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
   FutureOr<void> loginButtonClicked(LoginButtonClicked event, Emitter<LoginState> emit) async{
     Responsemodel response=await LoginRepo.login(event.email, event.password);
     if(response.success==true){
+      final SharedPreferences prefs = await SharedPreferences.getInstance();
+      prefs.setString('token',response.token.toString());
       emit(NavigateToMainScreen());
     }else{
       emit(ShowWrongPasswordSnackbar(message: response.message));

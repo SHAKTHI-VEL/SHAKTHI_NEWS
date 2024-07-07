@@ -1,9 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shakthi_news/features/Home/models/datamodel.dart';
+import 'package:shakthi_news/features/PaperShowcase/ui/paperShowcase.dart';
 
 class NewsCard extends StatefulWidget {
-  const NewsCard({super.key});
+  const NewsCard({super.key,required this.newspaper});
+
+  final dynamic newspaper;
 
   @override
   State<NewsCard> createState() => _NewsCardState();
@@ -16,7 +20,9 @@ class _NewsCardState extends State<NewsCard> {
     double width = MediaQuery.sizeOf(context).width;
     return Scaffold(
       body: InkWell(
-        onTap: (){Navigator.pushNamed(context, 'papershowcase');},
+        onTap: (){
+          Navigator.of(context).push(MaterialPageRoute(builder: (context)=>PaperShowcase(newspaper: widget.newspaper,)));
+        },
         child: Container(
           decoration: BoxDecoration(
               borderRadius: BorderRadius.all(
@@ -31,7 +37,7 @@ class _NewsCardState extends State<NewsCard> {
               Container(
                 height: 90,
                 decoration: BoxDecoration(
-                  image: DecorationImage(image: AssetImage('assets/toi.jpeg'),fit:BoxFit.fill),
+                  image: DecorationImage(image: AssetImage(widget.newspaper['imageUrl']),fit:BoxFit.fill),
                   
                 ),
               ),
@@ -48,7 +54,7 @@ class _NewsCardState extends State<NewsCard> {
                   Container(
                     alignment: Alignment.bottomLeft,
                     child: Text(
-                      'Times Of India',
+                      widget.newspaper['name'],
                       style: GoogleFonts.poppins(
                           fontSize: height * 0.016, fontWeight: FontWeight.w600),
                     ),
@@ -59,7 +65,7 @@ class _NewsCardState extends State<NewsCard> {
                   Row(
                     children: [
                       Text(
-                        'English',
+                        widget.newspaper['language'],
                         style: GoogleFonts.poppins(
                           color:Colors.green.shade500,
                             fontSize: height * 0.016,
