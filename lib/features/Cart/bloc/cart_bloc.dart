@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
+import 'package:shakthi_news/features/Cart/model/SubscriptionRouteModel.dart';
 import 'package:shakthi_news/features/Cart/model/cartDeleteModel.dart';
 import 'package:shakthi_news/features/Cart/model/dataModel.dart';
 import 'package:shakthi_news/features/Cart/repos/Cart_repo.dart';
@@ -18,7 +19,6 @@ class CartBloc extends Bloc<CartEvent, CartState> {
 
   FutureOr<void> deleteButtonClicked(DeleteButtonClicked event, Emitter<CartState> emit) async{
     Cartdeletemodel response=await CartRepo.deleteCart(event.id);
-    ResponseModel cartresponse=await CartRepo.getCart();
     if(response.success==true){
       emit(ShowSuccessfulScaffold(message: 'Item deleted'));
       Future.delayed(Duration(seconds: 5));
@@ -26,7 +26,13 @@ class CartBloc extends Bloc<CartEvent, CartState> {
     }
   }
 
-  FutureOr<void> addtoSubscriptionClicked(AddtoSubscriptionClicked event, Emitter<CartState> emit) {
+  FutureOr<void> addtoSubscriptionClicked(AddtoSubscriptionClicked event, Emitter<CartState> emit) async{
+    SubscriptionRouteModel response=await CartRepo.addToSubscription();
+    if(response.success==true){
+      emit(ShowSuccessfulScaffold(message: 'Added to subscription successfully'));
+      Future.delayed(Duration(seconds: 5));
+      emit(NavigateToMainScreen());
+    }
   }
 
   FutureOr<void> cartFetch(CartFetch event, Emitter<CartState> emit) async{

@@ -34,7 +34,15 @@ class _CartState extends State<Cart> {
         child: BlocConsumer<CartBloc, CartState>(
           bloc: cartBloc,
           listener: (context, state) {
-            // TODO: implement listener
+            if(state is ShowSuccessfulScaffold){
+            final message=state;
+            var snackBar = SnackBar(
+              content: Text(message.message),
+            );
+            ScaffoldMessenger.of(context).showSnackBar(snackBar);
+          }else if(state is NavigateToMainScreen){
+            Navigator.popAndPushNamed(context, 'mainscreen');
+          }
           },
           listenWhen: (previous, current) => current is CartActionState,
           buildWhen: (previous, current) => current is !CartActionState,
@@ -105,7 +113,9 @@ class _CartState extends State<Cart> {
                       ),
                       Spacer(),
                       InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          cartBloc.add(AddtoSubscriptionClicked());
+                        },
                         child: Container(
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
