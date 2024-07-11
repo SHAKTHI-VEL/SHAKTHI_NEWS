@@ -90,7 +90,7 @@ class _PaperShowcaseState extends State<PaperShowcase> {
                       style: GoogleFonts.poppins(),
                     ),
                     SizedBox(
-                      height: height * 0.20,
+                      height: height * 0.30,
                     ),
                     Container(
                       // margin: EdgeInsets.symmetric(horizontal: 20),
