@@ -13,7 +13,7 @@ class NavigateToSignup extends LoginActionState{}
 
 class NavigateToMainScreen extends LoginActionState{}
 
-class ShowWrongPasswordSnackbar extends LoginState{
+class ShowWrongPasswordSnackbar extends LoginActionState{
   final String message;
 
   ShowWrongPasswordSnackbar({required this.message});
