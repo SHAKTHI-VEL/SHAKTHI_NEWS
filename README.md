@@ -22,3 +22,6 @@ Shakti News is a convenient and user-friendly app designed to simplify newspaper
 [WhatsApp Video 2024-07-14 at 01.40.30.webm](https://github.com/user-attachments/assets/1fe830f5-afcf-4f04-a849-99d24acb3a01)
 
 
+![1](https://res.cloudinary.com/dgyvdwda7/image/upload/v1720940478/iwsmtvo8xviyajoynjex.png)
+![2](https://res.cloudinary.com/dgyvdwda7/image/upload/v1720940758/lnndeazmb6cj9tltbxoh.png)
+![3](https://res.cloudinary.com/dgyvdwda7/image/upload/v1720940983/tbgv6kpn7g5wfdccv33q.png)
