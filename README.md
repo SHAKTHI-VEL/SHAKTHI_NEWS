@@ -25,3 +25,28 @@ Shakti News is a convenient and user-friendly app designed to simplify newspaper
 ![1](https://res.cloudinary.com/dgyvdwda7/image/upload/v1720940478/iwsmtvo8xviyajoynjex.png)
 ![2](https://res.cloudinary.com/dgyvdwda7/image/upload/v1720940758/lnndeazmb6cj9tltbxoh.png)
 ![3](https://res.cloudinary.com/dgyvdwda7/image/upload/v1720940983/tbgv6kpn7g5wfdccv33q.png)
+
+## 💬💡 Features
+
+
+- Home: Displays list of newspapers available from the vendor
+- Cart: Review and manage your selected newspaper subscriptions
+- Subscription: View and manage all your purchased newspaper subscriptions in one convenient place
+- PaperShowcase: Preview before adding the paper to the cart
+
+## 📦 Packages
+
+| Name | Description |
+| --- | --- |
+| [`@cupertino_icons`](https://pub.dev/packages/cupertino_icons) | Cupertino Icons |
+| [`@shared_preferences`](https://pub.dev/packages/shared_preferences) | Shared Preferences |
+| [`@google_fonts`](https://pub.dev/packages/google_fonts) | Google Fonts |
+| [`@flutter_otp_text_field`](https://pub.dev/packages/flutter_otp_text_field) | Flutter Otp Text Field |
+| [`@bloc`](https://pub.dev/packages/bloc) | Bloc |
+| [`@flutter_bloc`](https://pub.dev/packages/flutter_bloc) | Flutter Bloc |
+| [`@flutter_dotenv`](https://pub.dev/packages/flutter_dotenv) | Flutter Dotenv |
+| [`@http`](https://pub.dev/packages/http) | Http |
+
+
+## 🗄️ Backend Repository
+ [`SHAKTHI NEWS BACKEND`](https://github.com/SHAKTHI-VEL/SHAKTHI-NEWS-BACKEND) 
