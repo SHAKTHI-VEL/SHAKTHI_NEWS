@@ -19,7 +19,7 @@
 Shakti News is a convenient and user-friendly app designed to simplify newspaper subscriptions. With just a few taps, users can effortlessly subscribe to their favorite newspapers. Powered by a robust tech stack including Flutter, Express.js, MongoDB, and Redis, Shakti News ensures a seamless and efficient experience.
 
 ## Walkthrough
-[WhatsApp Video 2024-07-14 at 01.40.30.webm](https://github.com/user-attachments/assets/1fe830f5-afcf-4f04-a849-99d24acb3a01)
+[SHAKTI NEWS WALKTHROUGH](https://github.com/user-attachments/assets/1fe830f5-afcf-4f04-a849-99d24acb3a01)
 
 
 ![1](https://res.cloudinary.com/dgyvdwda7/image/upload/v1720940478/iwsmtvo8xviyajoynjex.png)
