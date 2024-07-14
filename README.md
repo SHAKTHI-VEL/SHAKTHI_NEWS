@@ -1,16 +1,21 @@
-# shakthi_news
+<h1 align="center">  📲SHAKTI NEWS  📰 </h1> <br>
+<p align="center">
+</p>
 
-A new Flutter project.
+<p align="center">
+ <a href="https://pbs.twimg.com/media/GLwgHwIXMAAUBrS?format=jpg&name=small">
+    <img src="https://res.cloudinary.com/dgyvdwda7/image/upload/v1720935973/yhaaejzc59oegbakyoe0.png" alt="HiewAF9.md.png" border="0">
+  </a>
+<p align="center">
+  SHAKTI NEWS - Simplifying News Subscriptions!
+</p>
 
-## Getting Started
+## Introduction
+![alt text](https://img.shields.io/badge/Flutter-white?style=for-the-badge&logo=flutter&logoColor=02569B) 
+![alt text](https://img.shields.io/badge/Express.js-white?style=for-the-badge)
+![alt text](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
+![alt text](https://img.shields.io/badge/redis-%23DD0031.svg?&style=for-the-badge&logo=redis&logoColor=white)
 
-This project is a starting point for a Flutter application.
+Shakti News is a convenient and user-friendly app designed to simplify newspaper subscriptions. With just a few taps, users can effortlessly subscribe to their favorite newspapers. Powered by a robust tech stack including Flutter, Express.js, MongoDB, and Redis, Shakti News ensures a seamless and efficient experience.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Walkthrough
